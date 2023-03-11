@@ -1,0 +1,89 @@
+/*variables*/
+:root {
+  --main-color: #d5bffd;
+  --darknes-color: #7730fb;
+}
+
+/*global*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--darknes-color);
+
+  background: linear-gradient(#fff 400px, var(--main-color) 250px);
+  background-repeat: no-repeat;
+}
+
+body .material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.wrapper {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100%;
+  padding-bottom: 80px;
+
+  overflow: hidden;
+}
+
+.container {
+  width: calc((320 / 320) * 100vw);
+  margin: 0 auto;
+  padding: 0 calc((10 / 320) * 100vw);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.list-reset {
+  list-style: none;
+}
