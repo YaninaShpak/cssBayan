@@ -5,9 +5,55 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>cssBayan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+  <div class="wrapper">
+    <div class="container">
+      <h1 class="main-title">CSS Bayan</h1>
+      <ul class="bayan-list list-reset">
+        <li class="bayan-list__item">
+          <label>
+            <div class="bayan-card">
+              <input class="bayan-card__input visually-hidden" type="radio" name="bayan-card" id="" checked>
+              <div class="bayan-card__wrapper">
+                <h2 class="bayan-card__title">I'm have a question</h2>
+                <button class="bayan-card__icon">
+                  <span class="material-icons">
+                    expand_more
+                  </span>
+                </button>
+              </div>
+              <div class="bayan-card__img">
+                <img src="mem_0.jpg" alt="mem about question">
+              </div>
+            </div>
+          </label>
+        </li>
+        <li class="bayan-list__item">
+          <label>
+            <div class="bayan-card">
+              <input class="bayan-card__input visually-hidden" type="radio" name="bayan-card" id="">
+              <div class="bayan-card__wrapper">
+                <h2 class="bayan-card__title">Learn frontend</h2>
+                <button class="bayan-card__icon">
+                  <span class="material-icons">
+                    expand_more
+                  </span>
+                </button>
+              </div>
+              <div class="bayan-card__img">
+                <img src="mem_0.jpg" alt="mem">
+              </div>
+            </div>
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>
