@@ -276,6 +276,7 @@ body .material-icons {
 
   .bayan-list:hover .bayan-card__icon {
     opacity: 1;
+    color: var(--darknes-color);
   }
 
   .bayan-list:hover .bayan-card__title {
