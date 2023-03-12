@@ -19,12 +19,12 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
-  font-size: 16px;
+  font-size: 4.36vw;
   line-height: 1.2;
   font-weight: 400;
   color: var(--darknes-color);
 
-  background: linear-gradient(#fff 400px, var(--main-color) 250px);
+  background: linear-gradient(#fff 62vh, var(--main-color) 38vh);
   background-repeat: no-repeat;
 }
 
@@ -32,7 +32,7 @@ body .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
+  font-size: 1.71em;  /* Preferred icon size */
   display: inline-block;
   line-height: 1;
   text-transform: none;
@@ -60,20 +60,20 @@ body .material-icons {
   flex-direction: column;
 
   min-height: 100%;
-  padding-bottom: 80px;
+  padding-bottom: 25vw;
 
   overflow: hidden;
 }
 
 .container {
-  width: calc((320 / 320) * 100vw);
+  width: 100vw;
   margin: 0 auto;
-  padding: 0 calc((10 / 320) * 100vw);
+  padding: 0 3.125vw;
 }
 
 .main-title {
-  padding-top: 15px;
-  margin-bottom: 25px;
+  padding-top: 4.69vw;
+  margin-bottom: 7.81vw;
 
   font-weight: bold;
 }
@@ -81,15 +81,15 @@ body .material-icons {
 .bayan-list {
   display: flex;
   flex-direction: column;
-  row-gap: 20px;
+  row-gap: 6.25vw;
 
-  width: calc(300px + (550 - 300) * ((100vw - 320px) / (768 - 320)));
+  width: 93.75vw;
   margin: auto;
-  padding: 20px;
+  padding: 6.25vw;
 
   background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 5px 10px 0 var(--darknes-color);
+  border-radius: 3.13vw;
+  box-shadow: 0 1.56vw 3.13vw 0 var(--darknes-color);
 }
 
 .bayan-card {
@@ -106,10 +106,10 @@ body .material-icons {
   justify-content: space-between;
   align-items: center;
 
-  padding-bottom: 10px;
-  margin-bottom: 5px;
+  padding-bottom: 3.13vw;
+  margin-bottom: 3.13vw;
 
-  border-bottom: 1px solid var(--darknes-color);
+  border-bottom: 0.31vw solid var(--darknes-color);
 }
 
 .bayan-card__title {
@@ -147,7 +147,7 @@ body .material-icons {
 .bayan-card__img {
   align-self: center;
 
-  width: calc(250px + (450 - 250) * ((100vw - 320px) / (768 - 320)));
+  width: 79vw;
   height: 0;
 
   overflow: hidden;
@@ -161,14 +161,12 @@ body .material-icons {
 
 .bayan-list__item:hover .bayan-card__img,
 .bayan-card__input:checked ~ .bayan-card__img {
-  height: calc(260px + (550 - 260) * ((100vw - 320px) / (768 - 320)));
+  height: 81vw;
 }
 
 .visually-hidden {
   position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
+  visibility: hidden;
   border: 0;
   padding: 0;
   white-space: nowrap;
@@ -183,16 +181,31 @@ body .material-icons {
 
 @media (min-width: 820px) {
   body {
-    font-size: 18px;
+    font-size: 1.95vw;
   }
 
   .container {
-    min-width: 820px;
-    padding: 0 20px;
+    min-width: 100vw;
+    padding: 0 2.44vw;
   }
 
   .bayan-list {
-    width: calc(550px + (1000 - 550) * ((100vw - 820px) / (1440 - 820)));
+    row-gap: 2.44vw;
+  
+    width: 67vw;
+    margin: auto;
+    padding: 2.44vw;
+  
+    background-color: #fff;
+    border-radius: 1.22vw;
+    box-shadow: 0 0.6vw 1.22vw 0 var(--darknes-color);
+  }
+
+  .bayan-card__wrapper {
+    padding-bottom: 1.22vw;
+    margin-bottom: 1.22vw;
+  
+    border-bottom: 0.12vw solid var(--darknes-color);
   }
 
   .bayan-card__icon {
@@ -200,36 +213,53 @@ body .material-icons {
   }
 
   .bayan-card__img {
-    width: calc(450px + (500 - 450) * ((100vw - 820px) / (1440 - 820)));
+    width: 50vw;
   }
 
   .bayan-list__item:hover .bayan-card__img,
   .bayan-card__input:checked ~ .bayan-card__img {
-    height: calc(550px + (1000 - 550) * ((100vw - 820px) / (1440 - 820)));
+    height: 50vw;
+    max-height: max-content;
   }
   
 }
 
 @media (min-width: 1920px) {
   body {
-    font-size: 20px;
+    font-size: 1.04vw;
   }
 
   .container {
-    max-width: 1920px;
-    padding: 0 120px;
+    max-width: 100vw;
+    padding: 0 6.25vw;
   }
 
   .bayan-list {
-    width: 1000px;
+    row-gap: 1.04vw;
+  
+    width: 52vw;
+    margin: auto;
+    padding: 1.04vw;
+  
+    background-color: #fff;
+    border-radius: 0.52vw;
+    box-shadow: 0 0.2vw 0.52vw 0 var(--darknes-color);
+  }
+
+  .bayan-card__wrapper {
+    padding-bottom: 0.52vw;
+    margin-bottom: 0.52vw;
+  
+    border-bottom: 0.12vw solid var(--darknes-color);
   }
 
   .bayan-card__img {
-    width: 500px;
+    width: 30vw;
   }
 
   .bayan-list__item:hover .bayan-card__img,
   .bayan-card__input:checked ~ .bayan-card__img {
-    height: 550px;
+    height: 30vw;
+    max-height: max-content;
   }
 }
