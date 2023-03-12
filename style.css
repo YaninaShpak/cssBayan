@@ -97,9 +97,10 @@ body .material-icons {
   flex-direction: column;
 }
 
-.bayan-card:hover {
-  cursor: pointer;
+.bayan-card:active {
+  opacity: 0.7;
 }
+
 
 .bayan-card__wrapper {
   display: flex;
@@ -115,6 +116,10 @@ body .material-icons {
 .bayan-card__title {
   font-size: 1.13em;
   font-weight: 400;
+  color: #0d061b;
+}
+
+.bayan-card__input:checked ~ .bayan-card__wrapper .bayan-card__title {
   color: var(--darknes-color);
 }
 
@@ -122,13 +127,18 @@ body .material-icons {
   background: transparent;
   border: none;
 
-  opacity: 1;
+  
   transform: rotate(0);
   transition: all 0.8s ease;
 }
 
 .bayan-card__icon span {
   color: var(--darknes-color);
+}
+
+.bayan-card:active .bayan-card__title,
+.bayan-card:active .bayan-card__icon span {
+  color: #0d061b;
 }
 
 .bayan-card__input:checked ~ .bayan-card__wrapper .bayan-card__icon {
@@ -153,6 +163,7 @@ body .material-icons {
 .bayan-card__input:checked ~ .bayan-card__img {
   height: 81vw;
 }
+
 
 .visually-hidden {
   position: absolute;
@@ -253,10 +264,6 @@ body .material-icons {
 
   .bayan-card:hover {
     cursor: pointer;
-  }
-
-  .bayan-card__icon {
-    opacity: 0;
   }
 
   .bayan-list:hover .bayan-card__icon {
