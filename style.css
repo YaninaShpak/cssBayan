@@ -266,6 +266,10 @@ body .material-icons {
     cursor: pointer;
   }
 
+  .bayan-card__icon {
+    opacity: 0;
+  }
+
   .bayan-list:hover .bayan-card__icon {
     opacity: 1;
   }
