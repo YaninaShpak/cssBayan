@@ -78,6 +78,7 @@ body .material-icons {
   font-weight: bold;
 }
 
+/*accordion*/
 .bayan-list {
   display: flex;
   flex-direction: column;
@@ -92,6 +93,7 @@ body .material-icons {
   box-shadow: 0 1.56vw 3.13vw 0 var(--darknes-color);
 }
 
+/*accordion item*/
 .bayan-card {
   display: flex;
   flex-direction: column;
@@ -100,7 +102,6 @@ body .material-icons {
 .bayan-card:active {
   opacity: 0.7;
 }
-
 
 .bayan-card__wrapper {
   display: flex;
@@ -124,16 +125,17 @@ body .material-icons {
 }
 
 .bayan-card__icon {
+  color: #0d061b;
+
   background: transparent;
   border: none;
 
-  
   transform: rotate(0);
   transition: all 0.8s ease;
 }
 
 .bayan-card__icon span {
-  color: var(--darknes-color);
+  color: inherit;
 }
 
 .bayan-card:active .bayan-card__title,
@@ -142,6 +144,7 @@ body .material-icons {
 }
 
 .bayan-card__input:checked ~ .bayan-card__wrapper .bayan-card__icon {
+  color: var(--darknes-color);
   transform: rotate(180deg);
 }
 
@@ -164,7 +167,7 @@ body .material-icons {
   height: 81vw;
 }
 
-
+/*help-selectors*/
 .visually-hidden {
   position: absolute;
   visibility: hidden;
@@ -180,6 +183,7 @@ body .material-icons {
   list-style: none;
 }
 
+/*breakpoints*/
 @media (min-width: 820px) {
   body {
     font-size: 1.95vw;
