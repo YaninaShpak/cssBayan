@@ -71,6 +71,99 @@ body .material-icons {
   padding: 0 calc((10 / 320) * 100vw);
 }
 
+.main-title {
+  padding-top: 15px;
+  margin-bottom: 25px;
+
+  font-weight: bold;
+}
+
+.bayan-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+
+  width: calc(300px + (550 - 300) * ((100vw - 320px) / (768 - 320)));
+  margin: auto;
+  padding: 20px;
+
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px 0 var(--darknes-color);
+}
+
+.bayan-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.bayan-card:hover {
+  cursor: pointer;
+}
+
+.bayan-card__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+
+  border-bottom: 1px solid var(--darknes-color);
+}
+
+.bayan-card__title {
+  font-size: 1.13em;
+  font-weight: 400;
+  color: var(--darknes-color);
+}
+
+.bayan-card__icon {
+  background: transparent;
+  border: none;
+
+  
+  transform: rotate(0);
+  transition: all 0.8s ease;
+}
+
+.bayan-card__icon span {
+  color: var(--darknes-color);
+}
+
+.bayan-list:hover .bayan-card__icon {
+  opacity: 1;
+}
+
+.bayan-list__item:hover .bayan-card__icon {
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+
+.bayan-card__input:checked ~ .bayan-card__wrapper .bayan-card__icon {
+  transform: rotate(180deg);
+}
+
+.bayan-card__img {
+  align-self: center;
+
+  width: calc(250px + (450 - 250) * ((100vw - 320px) / (768 - 320)));
+  height: 0;
+
+  overflow: hidden;
+  transition: all 0.8s ease;
+}
+
+.bayan-card__img img {
+  width: 100%;
+  height: auto;
+}
+
+.bayan-list__item:hover .bayan-card__img,
+.bayan-card__input:checked ~ .bayan-card__img {
+  height: calc(260px + (550 - 260) * ((100vw - 320px) / (768 - 320)));
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -86,4 +179,57 @@ body .material-icons {
 
 .list-reset {
   list-style: none;
+}
+
+@media (min-width: 820px) {
+  body {
+    font-size: 18px;
+  }
+
+  .container {
+    min-width: 820px;
+    padding: 0 20px;
+  }
+
+  .bayan-list {
+    width: calc(550px + (1000 - 550) * ((100vw - 820px) / (1440 - 820)));
+  }
+
+  .bayan-card__icon {
+    opacity: 0;
+  }
+
+  .bayan-card__img {
+    width: calc(450px + (500 - 450) * ((100vw - 820px) / (1440 - 820)));
+  }
+
+  .bayan-list__item:hover .bayan-card__img,
+  .bayan-card__input:checked ~ .bayan-card__img {
+    height: calc(550px + (1000 - 550) * ((100vw - 820px) / (1440 - 820)));
+  }
+  
+}
+
+@media (min-width: 1920px) {
+  body {
+    font-size: 20px;
+  }
+
+  .container {
+    max-width: 1920px;
+    padding: 0 120px;
+  }
+
+  .bayan-list {
+    width: 1000px;
+  }
+
+  .bayan-card__img {
+    width: 500px;
+  }
+
+  .bayan-list__item:hover .bayan-card__img,
+  .bayan-card__input:checked ~ .bayan-card__img {
+    height: 550px;
+  }
 }
