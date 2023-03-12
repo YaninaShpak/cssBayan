@@ -122,22 +122,13 @@ body .material-icons {
   background: transparent;
   border: none;
 
-  
+  opacity: 1;
   transform: rotate(0);
   transition: all 0.8s ease;
 }
 
 .bayan-card__icon span {
   color: var(--darknes-color);
-}
-
-.bayan-list:hover .bayan-card__icon {
-  opacity: 1;
-}
-
-.bayan-list__item:hover .bayan-card__icon {
-  cursor: pointer;
-  transform: rotate(180deg);
 }
 
 .bayan-card__input:checked ~ .bayan-card__wrapper .bayan-card__icon {
@@ -159,7 +150,6 @@ body .material-icons {
   height: auto;
 }
 
-.bayan-list__item:hover .bayan-card__img,
 .bayan-card__input:checked ~ .bayan-card__img {
   height: 81vw;
 }
@@ -208,15 +198,10 @@ body .material-icons {
     border-bottom: 0.12vw solid var(--darknes-color);
   }
 
-  .bayan-card__icon {
-    opacity: 0;
-  }
-
   .bayan-card__img {
     width: 50vw;
   }
 
-  .bayan-list__item:hover .bayan-card__img,
   .bayan-card__input:checked ~ .bayan-card__img {
     height: 50vw;
     max-height: max-content;
@@ -261,5 +246,40 @@ body .material-icons {
   .bayan-card__input:checked ~ .bayan-card__img {
     height: 30vw;
     max-height: max-content;
+  }
+}
+
+@media (hover: hover) {
+
+  .bayan-card:hover {
+    cursor: pointer;
+  }
+
+  .bayan-card__icon {
+    opacity: 0;
+  }
+
+  .bayan-list:hover .bayan-card__icon {
+    opacity: 1;
+  }
+
+  .bayan-list:hover .bayan-card__title {
+    color: var(--darknes-color);
+  }
+  
+  .bayan-list__item:hover .bayan-card__icon {
+    cursor: pointer;
+    transform: rotate(180deg);
+  }
+
+  .bayan-list__item:hover .bayan-card__img {
+    height: 81vw;
+  }
+
+  @media (min-width: 820px) {
+    .bayan-list__item:hover .bayan-card__img {
+      height: 50vw;
+      max-height: max-content;
+    }
   }
 }
