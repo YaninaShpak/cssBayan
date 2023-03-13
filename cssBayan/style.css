@@ -169,7 +169,6 @@ body .material-icons {
 
 /*help-selectors*/
 .visually-hidden {
-  position: absolute;
   visibility: hidden;
   border: 0;
   padding: 0;
